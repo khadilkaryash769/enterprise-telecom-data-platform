@@ -18,3 +18,6 @@ This project simulates a production-grade telecom data engineering platform.
 ## Author
 
 Yash
+Project Version: 1.0
+Project Owner: Yash
+
