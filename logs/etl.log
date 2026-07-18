@@ -1,0 +1,10 @@
+2026-07-18 19:25:01,304 - INFO - ETL Started
+2026-07-18 19:25:03,738 - INFO - Connected to PostgreSQL
+2026-07-18 19:26:22,186 - INFO - Loaded 10000 customers into PostgreSQL
+2026-07-18 19:26:22,285 - INFO - ETL Finished Successfully
+2026-07-18 19:35:10,454 - INFO - ETL Started
+2026-07-18 19:35:10,546 - INFO - CSV loaded successfully. Rows: 10000
+2026-07-18 19:35:11,628 - INFO - Connected to PostgreSQL
+2026-07-18 19:36:35,606 - INFO - Loaded 10000 customers into PostgreSQL
+2026-07-18 19:36:35,644 - INFO - Database connection closed
+2026-07-18 19:36:35,644 - INFO - ETL Finished
