@@ -1,0 +1,5 @@
+database:
+  table: customers
+
+files:
+  customer_file: data/raw/customers.csv

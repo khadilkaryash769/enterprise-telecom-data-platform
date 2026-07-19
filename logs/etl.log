@@ -140,3 +140,25 @@ psycopg.errors.ConnectionTimeout: connection timeout expired
 2026-07-19 17:35:22,208 - INFO - No bad records found
 2026-07-19 17:35:25,230 - INFO - Loaded 10000 customers using COPY
 2026-07-19 17:35:25,236 - INFO - ETL Pipeline Finished
+2026-07-19 17:59:23,522 - INFO - Configuration Loaded
+2026-07-19 17:59:23,525 - INFO - ETL Pipeline Started
+2026-07-19 17:59:23,527 - INFO - Reading file: data/raw/customers.csv
+2026-07-19 17:59:23,616 - INFO - Read 10000 records
+2026-07-19 17:59:23,618 - INFO - Transform step started
+2026-07-19 17:59:23,618 - INFO - Transform step completed
+2026-07-19 17:59:23,619 - INFO - Validation Started
+2026-07-19 17:59:25,163 - INFO - Validation Completed | Valid: 10000 | Invalid: 0
+2026-07-19 17:59:25,215 - INFO - No bad records found
+2026-07-19 17:59:26,600 - INFO - Loaded 10000 customers using COPY
+2026-07-19 17:59:26,606 - INFO - ETL Pipeline Finished
+2026-07-19 18:05:25,436 - INFO - Configuration Loaded
+2026-07-19 18:05:25,439 - INFO - ETL Pipeline Started
+2026-07-19 18:05:25,440 - INFO - Reading file: data/raw/customers.csv
+2026-07-19 18:05:25,520 - INFO - Read 10000 records
+2026-07-19 18:05:25,521 - INFO - Transform step started
+2026-07-19 18:05:25,521 - INFO - Transform step completed
+2026-07-19 18:05:25,522 - INFO - Validation Started
+2026-07-19 18:05:27,302 - INFO - Validation Completed | Valid: 10000 | Invalid: 0
+2026-07-19 18:05:27,357 - INFO - No bad records found
+2026-07-19 18:05:28,417 - INFO - Loaded 10000 customers using COPY
+2026-07-19 18:05:28,423 - INFO - ETL Pipeline Finished

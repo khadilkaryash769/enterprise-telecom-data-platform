@@ -1,6 +1,8 @@
 import logging
 
 from config_loader import load_config
+config = load_config()
+print(config)
 
 from extract import extract_customers
 from transform import transform_customers
@@ -9,25 +11,12 @@ from save_bad_records import save_bad_records
 from load import load_customers
 
 
-# -------------------------------
-# Logging Configuration
-# -------------------------------
 logging.basicConfig(
     filename="logs/etl.log",
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     force=True
 )
-
-
-# -------------------------------
-# Load Configuration
-# -------------------------------
-config = load_config()
-
-customer_file = config["files"]["customer_file"]
-
-logging.info("Configuration Loaded")
 
 
 print("========== ETL PIPELINE STARTED ==========")
@@ -40,7 +29,7 @@ logging.info("ETL Pipeline Started")
 # -------------------------------
 print("Step 1 : Extracting data...")
 
-df = extract_customers(customer_file)
+df = extract_customers("data/raw/customers.csv")
 
 print(f"Extracted {len(df)} rows")
 
