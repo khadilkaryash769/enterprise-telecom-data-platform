@@ -130,3 +130,13 @@ psycopg.errors.ConnectionTimeout: connection timeout expired
 2026-07-19 17:11:09,497 - INFO - Validation Completed | Valid: 10000 | Invalid: 0
 2026-07-19 17:11:09,542 - INFO - No bad records found
 2026-07-19 17:11:10,098 - INFO - ETL Pipeline Finished
+2026-07-19 17:35:19,776 - INFO - ETL Pipeline Started
+2026-07-19 17:35:19,779 - INFO - Reading file: data/raw/customers.csv
+2026-07-19 17:35:19,878 - INFO - Read 10000 records
+2026-07-19 17:35:19,880 - INFO - Transform step started
+2026-07-19 17:35:19,880 - INFO - Transform step completed
+2026-07-19 17:35:19,882 - INFO - Validation Started
+2026-07-19 17:35:22,053 - INFO - Validation Completed | Valid: 10000 | Invalid: 0
+2026-07-19 17:35:22,208 - INFO - No bad records found
+2026-07-19 17:35:25,230 - INFO - Loaded 10000 customers using COPY
+2026-07-19 17:35:25,236 - INFO - ETL Pipeline Finished
