@@ -8,6 +8,12 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
+print("HOST =", os.getenv("DB_HOST"))
+print("PORT =", os.getenv("DB_PORT"))
+print("DB =", os.getenv("DB_NAME"))
+print("USER =", os.getenv("DB_USER"))
+print("PASSWORD =", os.getenv("DB_PASSWORD"))
+
 # Configure logging
 logging.basicConfig(
     filename="logs/etl.log",
@@ -42,28 +48,37 @@ try:
     # Clean table
     cur.execute("TRUNCATE TABLE customers RESTART IDENTITY")
 
-    # Insert records
-    for _, row in df.iterrows():
-        cur.execute(
-            """
-            INSERT INTO customers
-            (customer_id, first_name, last_name, phone_number, email, city, plan_type)
-            VALUES (%s, %s, %s, %s, %s, %s, %s)
-            """,
-            (
-                int(row["customer_id"]),
-                row["first_name"],
-                row["last_name"],
-                str(row["phone_number"]),
-                row["email"],
-                row["city"],
-                row["plan_type"]
-            )
+    # Prepare records for bulk insert
+    records = [
+        (
+            int(row["customer_id"]),
+            row["first_name"],
+            row["last_name"],
+            str(row["phone_number"]),
+            row["email"],
+            row["city"],
+            row["plan_type"]
         )
+        for _, row in df.iterrows()
+    ]
+
+    logging.info(f"Prepared {len(records)} records for bulk insert")
+
+    # Bulk insert
+    cur.executemany(
+        """
+        INSERT INTO customers
+        (customer_id, first_name, last_name, phone_number, email, city, plan_type)
+        VALUES (%s, %s, %s, %s, %s, %s, %s)
+        """,
+        records
+    )
 
     conn.commit()
 
+    logging.info("Bulk insert completed")
     logging.info(f"Loaded {len(df)} customers into PostgreSQL")
+
     print(f"✅ Loaded {len(df)} customers into PostgreSQL.")
 
 except Exception as e:

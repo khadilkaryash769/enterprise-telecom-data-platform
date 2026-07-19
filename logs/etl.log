@@ -8,3 +8,31 @@
 2026-07-18 19:36:35,606 - INFO - Loaded 10000 customers into PostgreSQL
 2026-07-18 19:36:35,644 - INFO - Database connection closed
 2026-07-18 19:36:35,644 - INFO - ETL Finished
+2026-07-19 08:53:48,818 - INFO - ETL Started
+2026-07-19 08:53:48,977 - INFO - CSV loaded successfully. Rows: 10000
+2026-07-19 08:53:49,954 - ERROR - ETL Failed: connection failed: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "admin"
+2026-07-19 08:53:49,976 - INFO - Database connection closed
+2026-07-19 08:53:49,976 - INFO - ETL Finished
+2026-07-19 08:57:46,985 - INFO - ETL Started
+2026-07-19 08:57:47,059 - INFO - CSV loaded successfully. Rows: 10000
+2026-07-19 08:57:47,494 - ERROR - ETL Failed: connection failed: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "admin"
+2026-07-19 08:57:47,498 - INFO - Database connection closed
+2026-07-19 08:57:47,498 - INFO - ETL Finished
+2026-07-19 09:08:43,668 - INFO - ETL Started
+2026-07-19 09:08:43,735 - INFO - CSV loaded successfully. Rows: 10000
+2026-07-19 09:08:44,127 - ERROR - ETL Failed: connection failed: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "admin"
+2026-07-19 09:08:44,130 - INFO - Database connection closed
+2026-07-19 09:08:44,130 - INFO - ETL Finished
+2026-07-19 09:12:41,931 - INFO - ETL Started
+2026-07-19 09:12:42,052 - INFO - CSV loaded successfully. Rows: 10000
+2026-07-19 09:14:52,271 - ERROR - ETL Failed: connection timeout expired
+2026-07-19 09:14:52,307 - INFO - Database connection closed
+2026-07-19 09:14:52,308 - INFO - ETL Finished
+2026-07-19 09:18:30,007 - INFO - ETL Started
+2026-07-19 09:18:30,138 - INFO - CSV loaded successfully. Rows: 10000
+2026-07-19 09:18:31,995 - INFO - Connected to PostgreSQL
+2026-07-19 09:18:35,060 - INFO - Prepared 10000 records for bulk insert
+2026-07-19 09:18:41,401 - INFO - Bulk insert completed
+2026-07-19 09:18:41,411 - INFO - Loaded 10000 customers into PostgreSQL
+2026-07-19 09:18:41,425 - INFO - Database connection closed
+2026-07-19 09:18:41,426 - INFO - ETL Finished
