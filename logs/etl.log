@@ -88,3 +88,45 @@ psycopg.errors.ConnectionTimeout: connection timeout expired
 2026-07-19 16:16:12,791 - INFO - Transform step started
 2026-07-19 16:16:12,791 - INFO - Transform step completed
 2026-07-19 16:16:14,302 - INFO - ETL Pipeline Finished
+2026-07-19 16:35:10,174 - INFO - ETL Pipeline Started
+2026-07-19 16:35:10,176 - INFO - Reading file: data/raw/customers.csv
+2026-07-19 16:35:10,261 - INFO - Read 10000 records
+2026-07-19 16:35:10,262 - INFO - Transform step started
+2026-07-19 16:35:10,263 - INFO - Transform step completed
+2026-07-19 16:35:10,265 - INFO - Validation Started
+2026-07-19 16:35:11,385 - INFO - Validation Completed. Valid: 10000, Invalid: 0
+2026-07-19 16:35:12,099 - INFO - ETL Pipeline Finished
+2026-07-19 16:52:34,625 - INFO - ETL Pipeline Started
+2026-07-19 16:52:34,629 - INFO - Reading file: data/raw/customers.csv
+2026-07-19 16:52:34,719 - INFO - Read 10000 records
+2026-07-19 16:52:34,719 - INFO - Transform step started
+2026-07-19 16:52:34,720 - INFO - Transform step completed
+2026-07-19 16:52:34,721 - INFO - Validation Started
+2026-07-19 16:52:36,312 - INFO - Validation Completed | Valid: 10000 | Invalid: 0
+2026-07-19 16:52:36,856 - INFO - ETL Pipeline Finished
+2026-07-19 17:00:20,898 - INFO - ETL Pipeline Started
+2026-07-19 17:00:20,902 - INFO - Reading file: data/raw/customers.csv
+2026-07-19 17:00:20,991 - INFO - Read 10000 records
+2026-07-19 17:00:20,992 - INFO - Transform step started
+2026-07-19 17:00:20,992 - INFO - Transform step completed
+2026-07-19 17:00:20,993 - INFO - Validation Started
+2026-07-19 17:00:22,510 - INFO - Validation Completed | Valid: 10000 | Invalid: 0
+2026-07-19 17:00:23,059 - INFO - ETL Pipeline Finished
+2026-07-19 17:07:00,102 - INFO - ETL Pipeline Started
+2026-07-19 17:07:00,104 - INFO - Reading file: data/raw/customers.csv
+2026-07-19 17:07:00,191 - INFO - Read 10000 records
+2026-07-19 17:07:00,194 - INFO - Transform step started
+2026-07-19 17:07:00,194 - INFO - Transform step completed
+2026-07-19 17:07:00,195 - INFO - Validation Started
+2026-07-19 17:07:01,795 - INFO - Validation Completed | Valid: 10000 | Invalid: 0
+2026-07-19 17:07:01,854 - INFO - No bad records found
+2026-07-19 17:07:03,281 - INFO - ETL Pipeline Finished
+2026-07-19 17:11:07,901 - INFO - ETL Pipeline Started
+2026-07-19 17:11:07,905 - INFO - Reading file: data/raw/customers.csv
+2026-07-19 17:11:07,989 - INFO - Read 10000 records
+2026-07-19 17:11:07,990 - INFO - Transform step started
+2026-07-19 17:11:07,991 - INFO - Transform step completed
+2026-07-19 17:11:07,992 - INFO - Validation Started
+2026-07-19 17:11:09,497 - INFO - Validation Completed | Valid: 10000 | Invalid: 0
+2026-07-19 17:11:09,542 - INFO - No bad records found
+2026-07-19 17:11:10,098 - INFO - ETL Pipeline Finished
