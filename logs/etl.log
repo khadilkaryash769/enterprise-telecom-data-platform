@@ -36,3 +36,55 @@
 2026-07-19 09:18:41,411 - INFO - Loaded 10000 customers into PostgreSQL
 2026-07-19 09:18:41,425 - INFO - Database connection closed
 2026-07-19 09:18:41,426 - INFO - ETL Finished
+2026-07-19 09:31:54,450 - INFO - ETL Pipeline Started
+2026-07-19 09:31:54,451 - INFO - Reading file: data/raw/customers.csv
+2026-07-19 09:31:54,539 - INFO - Read 10000 records
+2026-07-19 09:31:54,539 - INFO - Transform step started
+2026-07-19 09:31:54,539 - INFO - Transform step completed
+2026-07-19 09:31:54,612 - INFO - ETL Pipeline Finished
+2026-07-19 13:29:30,387 - INFO - ETL Pipeline Started
+2026-07-19 13:29:30,388 - INFO - Reading file: data/raw/customers.csv
+2026-07-19 13:29:30,432 - INFO - Read 10000 records
+2026-07-19 13:29:30,432 - INFO - Transform step started
+2026-07-19 13:29:30,432 - INFO - Transform step completed
+2026-07-19 13:29:30,462 - INFO - ETL Pipeline Finished
+2026-07-19 13:31:22,852 - INFO - ETL Pipeline Started
+2026-07-19 13:31:22,853 - INFO - Reading file: data/raw/customers.csv
+2026-07-19 13:31:22,898 - INFO - Read 10000 records
+2026-07-19 13:31:22,898 - INFO - Transform step started
+2026-07-19 13:31:22,898 - INFO - Transform step completed
+2026-07-19 13:31:22,927 - INFO - ETL Pipeline Finished
+2026-07-19 13:33:36,502 - INFO - ETL Pipeline Started
+2026-07-19 13:33:36,503 - INFO - Reading file: data/raw/customers.csv
+2026-07-19 13:33:36,608 - INFO - Read 10000 records
+2026-07-19 13:33:36,608 - INFO - Transform step started
+2026-07-19 13:33:36,608 - INFO - Transform step completed
+2026-07-19 13:33:36,674 - INFO - ETL Pipeline Finished
+2026-07-19 13:40:29,944 - INFO - ETL Pipeline Started
+2026-07-19 13:40:29,946 - INFO - Reading file: data/raw/customers.csv
+2026-07-19 13:40:29,999 - INFO - Read 10000 records
+2026-07-19 13:40:30,000 - INFO - Transform step started
+2026-07-19 13:40:30,000 - INFO - Transform step completed
+2026-07-19 13:42:40,146 - ERROR - Load Failed
+Traceback (most recent call last):
+  File "C:\Project\enterprise-telecom-data-platform\scripts\load.py", line 21, in load_customers
+    conn = psycopg.connect(
+        host=os.getenv("DB_HOST"),
+    ...<3 lines>...
+        password=os.getenv("DB_PASSWORD"),
+    )
+  File "C:\Project\enterprise-telecom-data-platform\.venv\Lib\site-packages\psycopg\connection.py", line 122, in connect
+    raise last_ex.with_traceback(None)
+psycopg.errors.ConnectionTimeout: connection timeout expired
+2026-07-19 13:42:40,213 - INFO - ETL Pipeline Finished
+2026-07-19 13:54:21,837 - INFO - ETL Pipeline Started
+2026-07-19 13:54:21,838 - INFO - Reading file: data/raw/customers.csv
+2026-07-19 13:54:21,885 - INFO - Read 10000 records
+2026-07-19 13:54:21,886 - INFO - Transform step started
+2026-07-19 13:54:21,886 - INFO - Transform step completed
+2026-07-19 16:16:12,690 - INFO - ETL Pipeline Started
+2026-07-19 16:16:12,693 - INFO - Reading file: data/raw/customers.csv
+2026-07-19 16:16:12,789 - INFO - Read 10000 records
+2026-07-19 16:16:12,791 - INFO - Transform step started
+2026-07-19 16:16:12,791 - INFO - Transform step completed
+2026-07-19 16:16:14,302 - INFO - ETL Pipeline Finished
