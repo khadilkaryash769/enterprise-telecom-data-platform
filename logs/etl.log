@@ -162,3 +162,169 @@ psycopg.errors.ConnectionTimeout: connection timeout expired
 2026-07-19 18:05:27,357 - INFO - No bad records found
 2026-07-19 18:05:28,417 - INFO - Loaded 10000 customers using COPY
 2026-07-19 18:05:28,423 - INFO - ETL Pipeline Finished
+2026-07-19 18:55:32,448 - INFO - Configuration Loaded
+2026-07-19 18:55:32,452 - INFO - ETL Pipeline Started
+2026-07-19 18:55:32,453 - INFO - Reading file: data/raw/customers.csv
+2026-07-19 18:55:32,542 - INFO - Read 10000 records
+2026-07-19 18:55:33,325 - INFO - New Records : 10000
+2026-07-19 18:55:33,327 - INFO - Transform step started
+2026-07-19 18:55:33,327 - INFO - Transform step completed
+2026-07-19 18:55:33,328 - INFO - Validation Started
+2026-07-19 18:55:35,366 - INFO - Validation Completed | Valid: 10000 | Invalid: 0
+2026-07-19 18:55:35,438 - INFO - No bad records found
+2026-07-19 18:55:36,834 - INFO - Loaded 10000 customers using COPY
+2026-07-19 18:55:36,838 - INFO - ETL Pipeline Finished
+2026-07-19 19:06:15,615 - INFO - Configuration Loaded
+2026-07-19 19:06:15,618 - INFO - ETL Pipeline Started
+2026-07-19 19:06:15,620 - INFO - Reading file: data/raw/customers.csv
+2026-07-19 19:06:15,729 - INFO - Read 10000 records
+2026-07-19 19:06:16,395 - INFO - New Records Found : 0
+2026-07-19 19:06:16,396 - INFO - Transform step started
+2026-07-19 19:06:16,397 - INFO - Transform step completed
+2026-07-19 19:06:16,397 - INFO - Validation Started
+2026-07-19 19:06:16,401 - INFO - Validation Completed | Valid: 0 | Invalid: 0
+2026-07-19 19:06:16,402 - INFO - No bad records found
+2026-07-19 19:06:16,919 - INFO - Loaded 0 customers using COPY
+2026-07-19 19:06:16,922 - INFO - ETL Pipeline Finished
+2026-07-19 19:10:58,792 - INFO - Configuration Loaded
+2026-07-19 19:10:58,794 - INFO - ETL Pipeline Started
+2026-07-19 19:10:58,795 - INFO - Reading file: data/raw/customers.csv
+2026-07-19 19:10:58,887 - INFO - Read 10000 records
+2026-07-19 19:10:59,537 - INFO - New Records Found : 0
+2026-07-19 19:10:59,538 - INFO - Transform step started
+2026-07-19 19:10:59,538 - INFO - Transform step completed
+2026-07-19 19:10:59,539 - INFO - Validation Started
+2026-07-19 19:10:59,543 - INFO - Validation Completed | Valid: 0 | Invalid: 0
+2026-07-19 19:10:59,545 - INFO - No bad records found
+2026-07-19 19:11:00,200 - INFO - Loaded 0 customers using COPY
+2026-07-19 19:11:00,203 - INFO - ETL Pipeline Finished
+2026-07-19 19:11:27,877 - INFO - Configuration Loaded
+2026-07-19 19:11:27,879 - INFO - ETL Pipeline Started
+2026-07-19 19:11:27,880 - INFO - Reading file: data/raw/customers.csv
+2026-07-19 19:11:27,968 - INFO - Read 10000 records
+2026-07-19 19:11:28,511 - INFO - New Records Found : 0
+2026-07-19 19:11:28,512 - INFO - Transform step started
+2026-07-19 19:11:28,513 - INFO - Transform step completed
+2026-07-19 19:11:28,515 - INFO - Validation Started
+2026-07-19 19:11:28,519 - INFO - Validation Completed | Valid: 0 | Invalid: 0
+2026-07-19 19:11:28,520 - INFO - No bad records found
+2026-07-19 19:11:28,859 - INFO - Loaded 0 customers using COPY
+2026-07-19 19:11:28,862 - INFO - ETL Pipeline Finished
+2026-07-19 19:12:55,681 - INFO - ETL Pipeline Started
+2026-07-19 19:12:55,683 - INFO - Reading file: data/raw/customers_incremental.csv
+2026-07-19 19:12:55,709 - INFO - Read 5 records
+2026-07-19 19:12:56,961 - INFO - New Records Found : 5
+2026-07-19 19:12:56,965 - INFO - Transform step started
+2026-07-19 19:12:56,965 - INFO - Transform step completed
+2026-07-19 19:12:56,966 - INFO - Validation Started
+2026-07-19 19:12:56,980 - INFO - Validation Completed | Valid: 5 | Invalid: 0
+2026-07-19 19:12:57,490 - INFO - Loaded 5 customers using COPY
+2026-07-19 19:12:57,493 - INFO - ETL Pipeline Finished
+2026-07-19 19:15:20,761 - INFO - ETL Pipeline Started
+2026-07-19 19:15:20,764 - INFO - Reading file: data/raw/customers_incremental.csv
+2026-07-19 19:15:20,798 - INFO - Read 5 records
+2026-07-19 19:15:22,171 - INFO - New Records Found : 5
+2026-07-19 19:15:22,172 - INFO - Transform step started
+2026-07-19 19:15:22,172 - INFO - Transform step completed
+2026-07-19 19:15:22,173 - INFO - Validation Started
+2026-07-19 19:15:22,187 - INFO - Validation Completed | Valid: 5 | Invalid: 0
+2026-07-19 19:15:22,535 - ERROR - Incremental Load Failed
+Traceback (most recent call last):
+  File "C:\Project\enterprise-telecom-data-platform\scripts\load.py", line 52, in load_customers
+    with cur.copy(
+         ~~~~~~~~^
+        """
+        ^^^
+    ...<12 lines>...
+        """
+        ^^^
+    ) as copy:
+    ^
+  File "C:\Users\yash khadilkar\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 148, in __exit__
+    next(self.gen)
+    ~~~~^^^^^^^^^^
+  File "C:\Project\enterprise-telecom-data-platform\.venv\Lib\site-packages\psycopg\cursor.py", line 330, in copy
+    raise ex.with_traceback(None)
+psycopg.errors.UniqueViolation: duplicate key value violates unique constraint "customers_pkey"
+DETAIL:  Key (customer_id)=(10001) already exists.
+CONTEXT:  COPY customers, line 1
+2026-07-19 19:15:22,554 - INFO - ETL Pipeline Finished
+2026-07-20 18:46:14,848 - INFO - ETL Pipeline Started
+2026-07-20 18:46:14,851 - INFO - Reading file: data/raw/customers_incremental.csv
+2026-07-20 18:46:14,897 - INFO - Read 5 records
+2026-07-20 18:46:50,424 - INFO - ETL Pipeline Started
+2026-07-20 18:46:50,427 - INFO - Reading file: data/raw/customers_incremental.csv
+2026-07-20 18:46:50,454 - INFO - Read 5 records
+2026-07-20 18:53:22,669 - INFO - ETL Pipeline Started
+2026-07-20 18:53:22,672 - INFO - Reading file: data/raw/customers_incremental.csv
+2026-07-20 18:53:22,696 - INFO - Read 5 records
+2026-07-20 19:07:35,153 - INFO - ETL Pipeline Started
+2026-07-20 19:07:35,155 - INFO - Reading file: data/raw/customers_incremental.csv
+2026-07-20 19:07:35,176 - INFO - Read 5 records
+2026-07-20 19:29:07,728 - INFO - ETL Pipeline Started
+2026-07-20 19:29:07,730 - INFO - Reading file: data/raw/customers_incremental.csv
+2026-07-20 19:29:07,757 - INFO - Read 5 records
+2026-07-20 19:29:08,440 - INFO - New Records Found : 5
+2026-07-20 19:29:08,441 - INFO - Transform step started
+2026-07-20 19:29:08,441 - INFO - Transform step completed
+2026-07-20 19:29:08,442 - INFO - Validation Started
+2026-07-20 19:29:08,453 - INFO - Validation Completed | Valid: 5 | Invalid: 0
+2026-07-20 19:29:08,655 - ERROR - Incremental Load Failed
+Traceback (most recent call last):
+  File "C:\Project\enterprise-telecom-data-platform\scripts\load.py", line 52, in load_customers
+    with cur.copy(
+         ~~~~~~~~^
+        """
+        ^^^
+    ...<12 lines>...
+        """
+        ^^^
+    ) as copy:
+    ^
+  File "C:\Users\yash khadilkar\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 148, in __exit__
+    next(self.gen)
+    ~~~~^^^^^^^^^^
+  File "C:\Project\enterprise-telecom-data-platform\.venv\Lib\site-packages\psycopg\cursor.py", line 330, in copy
+    raise ex.with_traceback(None)
+psycopg.errors.UniqueViolation: duplicate key value violates unique constraint "customers_pkey"
+DETAIL:  Key (customer_id)=(10001) already exists.
+CONTEXT:  COPY customers, line 1
+2026-07-20 19:29:08,669 - INFO - ETL Pipeline Finished
+2026-07-20 19:34:07,006 - INFO - ETL Pipeline Started
+2026-07-20 19:34:07,008 - INFO - Reading file: data/raw/customers_incremental.csv
+2026-07-20 19:34:07,027 - INFO - Read 5 records
+2026-07-20 19:34:07,626 - INFO - New Records Found : 5
+2026-07-20 19:34:07,627 - INFO - Transform step started
+2026-07-20 19:34:07,627 - INFO - Transform step completed
+2026-07-20 19:34:07,628 - INFO - Validation Started
+2026-07-20 19:34:07,640 - INFO - Validation Completed | Valid: 5 | Invalid: 0
+2026-07-20 19:34:07,885 - ERROR - Incremental Load Failed
+Traceback (most recent call last):
+  File "C:\Project\enterprise-telecom-data-platform\scripts\load.py", line 52, in load_customers
+    with cur.copy(
+         ~~~~~~~~^
+        """
+        ^^^
+    ...<12 lines>...
+        """
+        ^^^
+    ) as copy:
+    ^
+  File "C:\Users\yash khadilkar\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 148, in __exit__
+    next(self.gen)
+    ~~~~^^^^^^^^^^
+  File "C:\Project\enterprise-telecom-data-platform\.venv\Lib\site-packages\psycopg\cursor.py", line 330, in copy
+    raise ex.with_traceback(None)
+psycopg.errors.UniqueViolation: duplicate key value violates unique constraint "customers_pkey"
+DETAIL:  Key (customer_id)=(10001) already exists.
+CONTEXT:  COPY customers, line 1
+2026-07-20 19:34:07,900 - INFO - ETL Pipeline Finished
+2026-07-20 19:40:51,712 - INFO - ETL Pipeline Started
+2026-07-20 19:40:51,714 - INFO - Reading file: data/raw/customers_incremental.csv
+2026-07-20 19:40:51,732 - INFO - Read 5 records
+2026-07-20 19:40:52,097 - INFO - New Records Found : 0
+2026-07-20 19:40:52,098 - INFO - Transform step started
+2026-07-20 19:40:52,098 - INFO - Transform step completed
+2026-07-20 19:40:52,099 - INFO - Validation Started
+2026-07-20 19:40:52,102 - INFO - Validation Completed | Valid: 0 | Invalid: 0
+2026-07-20 19:40:52,110 - INFO - ETL Pipeline Finished

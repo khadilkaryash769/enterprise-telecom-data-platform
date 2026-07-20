@@ -1,0 +1,6 @@
+customer_id,first_name,last_name,phone_number,email,city,plan_type
+10001,Rahul,Sharma,9999990001,rahul@test.com,Mumbai,POSTPAID
+10002,Amit,Patil,9999990002,amit@test.com,Pune,PREPAID
+10003,Sagar,Kumar,9999990003,sagar@test.com,Delhi,POSTPAID
+10004,Rohan,Mehta,9999990004,rohan@test.com,Nashik,PREPAID
+10005,Vijay,Joshi,9999990005,vijay@test.com,Chennai,POSTPAID

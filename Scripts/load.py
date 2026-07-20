@@ -29,15 +29,11 @@ def load_customers(df):
 
         cur = conn.cursor()
 
-        # Table clean
-        cur.execute(
-            "TRUNCATE TABLE customers RESTART IDENTITY"
-        )
 
-        print("Table Truncated")
+        # ---------------------------------
+        # Prepare Data for COPY
+        # ---------------------------------
 
-
-        # DataFrame ko CSV memory buffer me convert karo
         buffer = io.StringIO()
 
         df.to_csv(
@@ -49,8 +45,11 @@ def load_customers(df):
         buffer.seek(0)
 
 
-        # PostgreSQL COPY
-        cur.copy(
+        # ---------------------------------
+        # Incremental Insert
+        # ---------------------------------
+
+        with cur.copy(
             """
             COPY customers
             (
@@ -64,27 +63,57 @@ def load_customers(df):
             )
             FROM STDIN
             WITH CSV
+            """
+        ) as copy:
+
+            copy.write(buffer.getvalue())
+
+
+        conn.commit()
+
+
+        print(
+            f"✅ Loaded {len(df)} new customers"
+        )
+
+
+        logging.info(
+            f"Loaded {len(df)} new customers"
+        )
+
+
+        # ---------------------------------
+        # Update Metadata
+        # ---------------------------------
+
+        last_customer_id = int(
+            df["customer_id"].max()
+        )
+
+
+        cur.execute(
+            """
+            UPDATE etl_metadata
+            SET last_loaded_id = %s,
+                updated_at = CURRENT_TIMESTAMP
+            WHERE table_name = 'customers'
             """,
-            buffer
+            (last_customer_id,)
         )
 
 
         conn.commit()
 
 
-        logging.info(
-            f"Loaded {len(df)} customers using COPY"
-        )
-
         print(
-            f"✅ Loaded {len(df)} customers using COPY"
+            f"Metadata Updated. Last Loaded ID = {last_customer_id}"
         )
 
 
     except Exception as e:
 
         logging.exception(
-            "COPY Load Failed"
+            "Incremental Load Failed"
         )
 
         print(
