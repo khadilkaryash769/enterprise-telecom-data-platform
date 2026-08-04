@@ -1,5 +1,6 @@
 from spark_logger import logger
 
+
 def extract_data(spark):
 
     file_path = "data/Raw/customers.csv"
@@ -15,6 +16,6 @@ def extract_data(spark):
 
     print(f"Extracted Records : {df.count()}")
 
-    logging.info(f"Extracted {df.count()} records")
+    logger.info(f"Extracted {df.count()} records")
 
     return df

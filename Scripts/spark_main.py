@@ -21,11 +21,11 @@ def main():
 
     print("=" * 50)
     print("Spark Session Created Successfully!")
-    print("Spark Version :", spark.version)
+    print(f"Spark Version : {spark.version}")
     print("=" * 50)
 
     # -----------------------------
-    # Extract
+    # Step 1 : Extract
     # -----------------------------
     print("Step 1 : Extracting Data...")
 
@@ -34,7 +34,7 @@ def main():
     print(f"Total Records : {df.count()}")
 
     # -----------------------------
-    # Transform
+    # Step 2 : Transform
     # -----------------------------
     print("Step 2 : Transforming Data...")
 
@@ -43,7 +43,7 @@ def main():
     print("Transformation Completed")
 
     # -----------------------------
-    # Validation
+    # Step 3 : Validation
     # -----------------------------
     print("Step 3 : Validating Data...")
 
@@ -53,7 +53,7 @@ def main():
     print(f"Invalid Records : {invalid_df.count()}")
 
     # -----------------------------
-    # Load
+    # Step 4 : Load
     # -----------------------------
     print("Step 4 : Loading Data...")
 
@@ -61,11 +61,21 @@ def main():
 
     print("Loading Completed")
 
+    # -----------------------------
+    # ETL Summary
+    # -----------------------------
+    print("\n" + "=" * 50)
+    print("ETL SUMMARY")
+    print("=" * 50)
+    print(f"Total Records   : {df.count()}")
+    print(f"Valid Records   : {valid_df.count()}")
+    print(f"Invalid Records : {invalid_df.count()}")
+    print(f"Loaded Records  : {valid_df.count()}")
+    print("=" * 50)
+
     spark.stop()
 
-    print("=" * 50)
-    print("Spark ETL Pipeline Finished Successfully")
-    print("=" * 50)
+    print("Spark ETL Pipeline Finished Successfully!")
 
 
 if __name__ == "__main__":
