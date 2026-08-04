@@ -328,3 +328,9 @@ CONTEXT:  COPY customers, line 1
 2026-07-20 19:40:52,099 - INFO - Validation Started
 2026-07-20 19:40:52,102 - INFO - Validation Completed | Valid: 0 | Invalid: 0
 2026-07-20 19:40:52,110 - INFO - ETL Pipeline Finished
+2026-07-26 16:35:40,551 - INFO - ETL Pipeline Started
+2026-07-26 16:35:40,552 - INFO - Reading file: data/raw/customers_incremental.csv
+2026-07-26 16:35:40,567 - INFO - Read 5 records
+2026-07-26 17:09:11,190 - INFO - ETL Pipeline Started
+2026-07-26 17:09:11,191 - INFO - Reading file: data/raw/customers_incremental.csv
+2026-07-26 17:09:11,203 - INFO - Read 5 records
