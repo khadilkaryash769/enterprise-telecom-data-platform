@@ -8,10 +8,10 @@ def transform_data(df):
     # Remove duplicate rows
     df = df.dropDuplicates()
 
-    # Remove rows having NULL customer_id
+    # Remove rows with NULL customer_id
     df = df.dropna(subset=["customer_id"])
 
-    # Remove extra spaces from string columns
+    # Trim string columns
     for column in df.columns:
         if dict(df.dtypes)[column] == "string":
             df = df.withColumn(column, trim(col(column)))

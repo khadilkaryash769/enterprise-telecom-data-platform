@@ -1,11 +1,28 @@
+import os
+from pathlib import Path
+
+from dotenv import load_dotenv
+
+# Load .env from project root
+load_dotenv(Path(__file__).resolve().parent.parent / ".env")
+
+
 def load_data(df):
+
+    jdbc_url = (
+        f"jdbc:postgresql://"
+        f"{os.getenv('DB_HOST')}:"
+        f"{os.getenv('DB_PORT')}/"
+        f"{os.getenv('DB_NAME')}"
+    )
+
     (
         df.write
         .format("jdbc")
-        .option("url", "jdbc:postgresql://127.0.0.1:5432/telecom_db")
+        .option("url", jdbc_url)
         .option("dbtable", "customers_spark")
-        .option("user", "admin")
-        .option("password", "admin123")
+        .option("user", os.getenv("DB_USER"))
+        .option("password", os.getenv("DB_PASSWORD"))
         .option("driver", "org.postgresql.Driver")
         .mode("overwrite")
         .save()

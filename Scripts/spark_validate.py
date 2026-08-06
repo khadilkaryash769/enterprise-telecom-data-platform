@@ -4,9 +4,7 @@ from pyspark.sql.window import Window
 
 def validate_customers(df):
 
-    # -----------------------------
     # Duplicate Phone Number Check
-    # -----------------------------
     window_spec = Window.partitionBy("phone_number")
 
     df = df.withColumn(
@@ -14,22 +12,18 @@ def validate_customers(df):
         count("phone_number").over(window_spec)
     )
 
-    # -----------------------------
     # Invalid Records
-    # -----------------------------
     invalid_df = df.filter(
-    (col("phone_number").isNull()) |
-    (col("first_name").isNull()) |
-    (col("last_name").isNull()) |
-    (col("email").isNull()) |
-    (~col("email").contains("@")) |
-    (~col("plan_type").isin("PREPAID", "POSTPAID")) |
-    (col("phone_count") > 1)
-)
+        (col("phone_number").isNull()) |
+        (col("first_name").isNull()) |
+        (col("last_name").isNull()) |
+        (col("email").isNull()) |
+        (~col("email").contains("@")) |
+        (~col("plan_type").isin("PREPAID", "POSTPAID")) |
+        (col("phone_count") > 1)
+    )
 
-    # -----------------------------
     # Valid Records
-    # -----------------------------
     valid_df = df.subtract(invalid_df)
 
     # Remove Helper Column

@@ -16,6 +16,7 @@ def main():
             "spark.jars",
             r"C:\Project\enterprise-telecom-data-platform\jars\postgresql-42.7.12.jar"
         )
+        .config("spark.driver.extraJavaOptions", "-Duser.timezone=UTC")
         .getOrCreate()
     )
 
@@ -24,46 +25,29 @@ def main():
     print(f"Spark Version : {spark.version}")
     print("=" * 50)
 
-    # -----------------------------
-    # Step 1 : Extract
-    # -----------------------------
+    # Step 1
     print("Step 1 : Extracting Data...")
-
     df = extract_data(spark)
 
-    print(f"Total Records : {df.count()}")
-
-    # -----------------------------
-    # Step 2 : Transform
-    # -----------------------------
+    # Step 2
     print("Step 2 : Transforming Data...")
-
     df = transform_data(df)
-
     print("Transformation Completed")
 
-    # -----------------------------
-    # Step 3 : Validation
-    # -----------------------------
+    # Step 3
     print("Step 3 : Validating Data...")
-
     valid_df, invalid_df = validate_customers(df)
 
     print(f"Valid Records   : {valid_df.count()}")
     print(f"Invalid Records : {invalid_df.count()}")
 
-    # -----------------------------
-    # Step 4 : Load
-    # -----------------------------
+    # Step 4
     print("Step 4 : Loading Data...")
-
     load_data(valid_df)
 
     print("Loading Completed")
 
-    # -----------------------------
-    # ETL Summary
-    # -----------------------------
+    # Summary
     print("\n" + "=" * 50)
     print("ETL SUMMARY")
     print("=" * 50)

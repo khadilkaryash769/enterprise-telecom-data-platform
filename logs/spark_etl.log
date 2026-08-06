@@ -3,3 +3,21 @@
 2026-08-04 19:56:12,698 - INFO - Reading file : data/Raw/customers.csv
 2026-08-04 19:56:35,307 - INFO - Extracted 10000 records
 2026-08-04 19:57:18,332 - INFO - Closing down clientserver connection
+2026-08-04 20:02:24,303 - INFO - Reading file : data/Raw/customers.csv
+2026-08-04 20:02:47,868 - INFO - Extracted 10000 records
+2026-08-04 20:03:08,727 - INFO - Closing down clientserver connection
+2026-08-04 20:05:36,145 - INFO - Reading file : data/Raw/customers.csv
+2026-08-04 20:06:00,289 - INFO - Extracted 10000 records
+2026-08-04 20:06:20,074 - INFO - Closing down clientserver connection
+2026-08-04 20:07:36,090 - INFO - Reading file : data/Raw/customers.csv
+2026-08-04 20:08:00,640 - INFO - Extracted 10000 records
+2026-08-04 20:08:20,521 - INFO - Closing down clientserver connection
+2026-08-04 20:15:57,866 - INFO - Reading file : data/Raw/customers.csv
+2026-08-04 20:16:26,432 - INFO - Extracted 10000 records
+2026-08-04 20:16:47,856 - INFO - Closing down clientserver connection
+2026-08-04 20:24:45,620 - INFO - Reading file : data/Raw/customers.csv
+2026-08-04 20:25:13,686 - INFO - Extracted 10000 records
+2026-08-04 20:25:40,491 - INFO - Closing down clientserver connection
+2026-08-06 18:57:47,821 - INFO - Reading file : data/Raw/customers.csv
+2026-08-06 18:58:15,421 - INFO - Extracted 10000 records
+2026-08-06 18:58:58,284 - INFO - Closing down clientserver connection
