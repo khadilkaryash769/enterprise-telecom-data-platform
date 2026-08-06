@@ -4,6 +4,7 @@ from spark_extract import extract_data
 from spark_transform import transform_data
 from spark_validate import validate_customers
 from spark_load import load_data
+from spark_metrics import print_metrics
 
 
 def main():
@@ -46,6 +47,12 @@ def main():
     load_data(valid_df)
 
     print("Loading Completed")
+    
+    print_metrics(
+    total_records=df.count(),
+    valid_records=valid_df.count(),
+    invalid_records=invalid_df.count()
+)
 
     # Summary
     print("\n" + "=" * 50)

@@ -21,3 +21,6 @@
 2026-08-06 18:57:47,821 - INFO - Reading file : data/Raw/customers.csv
 2026-08-06 18:58:15,421 - INFO - Extracted 10000 records
 2026-08-06 18:58:58,284 - INFO - Closing down clientserver connection
+2026-08-06 19:10:08,059 - INFO - Reading file : data/Raw/customers.csv
+2026-08-06 19:10:27,186 - INFO - Extracted 10000 records
+2026-08-06 19:11:16,620 - INFO - Closing down clientserver connection
